@@ -1,9 +1,9 @@
-M300 - LB2 Dokumentation Silvan Walz
+M300 - LB2 Dokumentation Stefan Seslak
 ===
-Die nachstehende Dokumentation zeigt alle Schritte auf, die ich während der LB2 gemacht habe.
+Die Dokumentation zeigt alle Schritte auf, die ich während der LB2 gemacht und was ich dazu gelernt habehabe.
 
 ## Inhaltsverzeichnis
-- [M300 - LB2 Dokumentation Silvan Walz](#m300---lb2-dokumentation-silvan-walz)
+- [M300 - LB2 Dokumentation Stefan Seslak](#m300---lb2-dokumentation-stefan-seslak)
 	- [Inhaltsverzeichnis](#inhaltsverzeichnis)
 - [K1](#k1)
 	- [Vagrant](#vagrant)
@@ -33,10 +33,10 @@ K1
  
   ## VirtualBox
 
-1. Als erstes habe ich auf [dieser Webseite](https://www.virtualbox.org) VirtualBox heruntergeladen und danach GUI-basiert installiert.
-2. Danach habe ich den Ubuntu Desktop 16.04.05 auf [dieser Webseite](https://www.ubuntu.com/#download) heruntergeladen. 
+1. Als erstes habe ich  [VirtualBox](https://www.virtualbox.org) und [Ubuntu Desktop 16.04.05] (https://www.ubuntu.com/#download)heruntergeladen.
+2. Danach habe ich Virtualbox auf meinem PC installiert.
 
-*Nachdem ich das ISO heruntergeladen habe, habe ich die VM erstellt:*
+*Nachdem ich das gemacht habe, habe ich die VM erstellt, mit der ISO Datei die ich vorhin heruntergeladen habe und mit Hilfe dieser ANleitung:*
 1. VirtualBox starten
 2. Mit einem klick auf `Neu` eine neue VM erstellen.
 3. Als nächstes muss man folgende Attribute angeben:
@@ -57,9 +57,9 @@ K1
 9. Alle Änderungen speichern und die VM starten
 10. Nun den Installationsanweisungen der OS-Installation folgen. 
 
-Nun ist die VM erstellt.
+Nun ist die VM mit all diesen Vorgaben erstellt.
 
-*Danach habe ich in der Bash folgende Befehle ausgeführt.*
+*Danach habe ich in der Bash von Ubuntu folgende Befehle ausgeführt um das System auf den neusten Stand zu bringen.*
 
 1. Paketliste neu einlesen und Pakete aktualisieren:
    Shell 
@@ -70,32 +70,30 @@ Nun ist die VM erstellt.
    $  sudo reboot           #System-Neustart durchführen
    
 2. Software Controlcenter "Synaptic" installieren:
-   Shell 
    $  sudo apt-get install synaptic
    
 3. Nach erfolgreicher Installation in der Suche nach "Synaptic Package Manager" suchen und diesen starten
 4. Innerhalb des Managers nach "apache" (Webserver-Programm) suchen und dieses (inkl. aller Abhängigkeiten) installieren
 5. System-Neustart durchführen:
-   Shell 
    $  sudo reboot
    
-6. Danach habe geprüft, ob der Standard-Content des Webservers unter "http://127.0.0.01:80" erreichbar ist
+6. Danach habe ich geprüft, ob der Standart-Content des Webservers unter "http://127.0.0.01:80"(Localhost) erreichbar ist
 
 
 ## Vagrant
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
 
-Zuerst habe ich Vagrant auf [dieser Webseite](https://www.vagrantup.com/ "vagrantup.com")   heruntergeladen und GUI-Basiert installiert.
+Zuerst habe ich [Vagrant](https://www.vagrantup.com/ "vagrantup.com")    heruntergeladen und installiert.
 
 *Danach habe ich mit Vagrant eine VM erstellt.*
 1. Terminal öffnen
 2. Einen neuen Ordner für die VM anlegen:
     Shell
-      $ cd C:\Users\silva
+      $ cd C:\Users\stefan.seslak\Desktop\MeinRepository
       $ mkdir MeineVagrantVM
       $ cd MeineVagrantVM
      
-3. Vagrantfile erzeugen, VM erstellen und starten:
+3. Vagrantfile erzeugen, VM erstellen und entsprechend starten:
     Shell
       $ vagrant box add http://10.1.66.11/vagrant/ubuntu/xenial64.box --name ubuntu/xenial64  #Vagrant-Box vom Netzwerkshare hinzufügen
       $ vagrant init ubuntu/xenial64        #Vagrantfile erzeugen
@@ -106,32 +104,30 @@ Zuerst habe ich Vagrant auf [dieser Webseite](https://www.vagrantup.com/ "vagran
       $ cd C:\Users\silva\MeineVagrantVM      #Zum Verzeichnis der VM wechseln
       $ vagrant ssh                       #SSH-Verbindung zur VM aufbauen
      
+Ich habe geshen, dass es viel einfacher und schneller ist mit Vagrant eine VM zu erstellen.
 
-*Nachfolgend habe ich eine VM mit Apache Webserver von einem bereits abgeänderten File erstellt:*
+*Daraufhin habe ich eine VM mit Apache Webserver von einem bereits abgeänderten File erstellt aus dem M300-Repository:*
 
 1. Terminal öffnen
 2. In das M300-Verzeichnis wechseln:
-    Shell
       $ cd C:\Users\silva\M300\vagrant\web
      
 3. VM erstellen und starten:
-    Shell
       $ vagrant up
      
 4. Danach habe ich im Webbrowser geprüft, ob der Standard-Content des Webservers unter "http://127.0.0.01:8080" (localhost) erreichbar ist
-5. Später habe ich im Ordner `\web` die Hauptseite `index.html` editiert und das Resultat überprüft.
+5. Danach habe ich im Ordner `\web` die Hauptseite `index.html` editiert und das Resultat überprüft.
 6. Abschliessend habe ich die VM wieder gelöscht:
-    Shell
       $ vagrant destroy -f
     
 
 ## Visual Studio Code
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
 
-*In diesem Abschnit habe ich Visual Studio Code heruntergeladen, installiert und angewendet.*
+*In diesem Abschnit habe ich Visual Studio Code heruntergeladen, installiert und kleine Einstellungen vorgenommen.*
 
-1. Ich habe Visual Studio Code auf [dieser](https://code.visualstudio.com/"visualstudio.com") Seite heruntergelden und GUI-basiert installiert.
-2. Danach habe ich dem Editor drei wichtige Extensions hinzugefügt:
+1. Ich habe [Visual Studio Code](https://code.visualstudio.com/"visualstudio.com") heruntergelden installiert.
+2. Daraufhin habe ich dem Editor drei wichtige Extensions hinzugefügt:
 
 * Markdown All in One (von Yu Zhang)
 * Vagrant Extension (von Marco Stanzi)
@@ -147,37 +143,35 @@ Dazu habe ich folgende Anweisungen befolgt:
 
   1. Änderungen am Readme-File von meinem Repositorys vornehmen
   2. Datei speichern und in der linken Leiste das Symbol mit einer "1" aufrufen
-  3. Unter dem Abschnitt *Changes* die betroffenen Files bezüglich ihres Changes "stagen"
-  4. Nachricht hinterlegen und Haken setzen
+  3. Unter dem Abschnitt *Changes* die betroffenen Files bezüglich ihres Changes "stagen" indem ich auf das "Plus-Symbol" klicke
+  4. Nachricht hinterlegen und auf commit klicken
   5. Bei den 3 Punkten (...) auf *Push* klicken
-  6. Warten, bis Dateien vollständig gepusht wurden
+  6. Warten, bis Dateien vollständig hochgeladen wurden
 
 ## Git-Client
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
 
-Damit ich die Arbeiten lokal auf dem eigenen PC machen konnte, musste ich der sogenannte "Git Client", auf Windows "Git/Bash" installieren. 
+Damit ich die Befehle lokal auf dem eigenen PC machen konnte, musste ich den "Git Client", auf Windows "Git/Bash" installieren. 
 
 *Client installieren*
-Ich habe Client-Installation auf [dieser](https://git-scm.com/downloads) Seite heruntergeladen und GUI-basiert installiert.
+Ich habe die Client-Installation auf [dieser](https://git-scm.com/downloads) Seite heruntergeladen und installiert.
 
 *Danach habe ich den Client konfiguriert:*
 1. Terminal öffnen
 2. Git konfigurieren mit Informationen des GitHub-Accounts:
     Shell
-      $ git config --global user.name "<username>"
-      $ git config --global user.email "<e-mail>"
+      $ git config --global user.name "StefanZ54"
+      $ git config --global user.email "stef4n7@gmail.com"
      
 
-*Damit ich das readme-File lokal bearbeiten kann, habe ich das Repository heruntergeladen und aktualisiert.*
+*Damit ich meine Files lokal bearbeiten und hochladen kann, habe ich mein Repository heruntergeladen und aktualisiert.*
 
 1. Terminal öffnen
 2. Ordner für Repository erstellen:
-    Shell
       $ cd C:\Users\silva\Desktop
       $ mkdir githublb2
      
 3. Repository mit SSH klonen:
-    Shell
       $ git clone git@github.com:silvanwalz/lb2.git
 
       Cloning into 'lb2'...
@@ -192,22 +186,18 @@ Ich habe Client-Installation auf [dieser](https://git-scm.com/downloads) Seite h
 ## SSH-Key 
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
 
-*Zuerst musste ich Lokal einen SSH-Key erstellen:*
+*Zuerst musste ich Lokal einen SSH-Key erstellen für mein Repository:*
 
-1.  Folgenden Befehl mit der Account-E-Mail von GitHub in Bash einfügen:
-    Shell
+1.  Folgenden Befehl mit der Account-E-Mail von GitHub in Bash einfügen damit der Schlüssel generiert wird:
       $  ssh-keygen -t rsa -b 4096 -C "silvan.walz@hotmail.ch"
     
 2. Neuer SSH-Key wird erstellt:
-    Shell
       Generating public/private rsa key pair.
     
 3. Bei der Abfrage, unter welchem Namen der Schlüssel gespeichert werden soll, die Enter-Taste drücken (für Standard):
-    Shell
       Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
     
 4. Nun habe ich ein Passwort für den Key festgelegt:
-    Shell
       Enter passphrase (empty for no passphrase): [Passwort]
       Enter same passphrase again: [Passwort wiederholen]
     
@@ -215,14 +205,13 @@ Ich habe Client-Installation auf [dieser](https://git-scm.com/downloads) Seite h
 1. Auf www.github.com im Benutzerkonto *Settings* aufrufen
 2.  Unter den Menübereichen auf der linken Seite zum Abschnitt *SSH und GPG keys* wechseln
 3.  Auf *New SSH key* klicken
-4.  Im Formular unter *Title* die Bezeichnung MB SSH-Key vergeben
-5.  Den Key von der Datei *C:\Users\silva\.ssh\id_rsa.pub* einfügen und auf *Add SSH key* klicken
+4.  Im Formular unter *Title* die Bezeichnung vergeben()
+5.  Den Key von der Datei *C:\Users\stefqn.selak\.ssh\id_rsa.pub* kopieren und im Github einfügen und auf *Add SSH key* klicken
 
-*SSH Zugriff auf VM*
+######*SSH Zugriff auf VM*
 
-Um Zugriff via SSH auf die VM aufzubauen, muss man bloss einen kurzen Befehl eingeben.
-shell
-vagrant ssh
+#Um Zugriff via SSH auf die VM aufzubauen, muss man bloss einen kurzen Befehl eingeben.
+#vagrant ssh
 
 
 _
@@ -234,8 +223,9 @@ K2
 *Ich habe folgendermassen einen Github Account erstellt:*
 1. Auf [GitHub.com](https://github.com) gehen
 2. Auf *Sign up* klicken
-3. Username, E-mail und Passwort eingeben sowie Aufgabe zum verifizieren lösen
+3. Username, E-mail und Passwort eingeben
 4. Auf *Create an Account* klicken
+5. E-Mail zur Verifizierung bestätigen
 
 K3
 ======
@@ -245,11 +235,11 @@ K3
 ## Testen
 
 ### Apache
-- Ich habe den Apache getestet, indem ich auf meinem Client die IP-Adresse der VM eingegeben habe. 
-- Zudem habe ich das index.html geändert und geschaut ob es die Änderungen übernommen hat.
+- Ich habe den Apache getestet, indem ich im Web-Browser die IP-Adresse der VM eingegeben habe. 
+
 
 ### Users and Groups
-- Mit diesem Befehl habe ich alle Benutzer in der VM angezeigt und habe dann gesehen, das meine beiden User erstellt worden sind.
+- Mit diesem Befehl habe ich alle Benutzer in der VM angezeigt und habe dann gesehen, das meine beiden User die ich erstellt habe vorhanden sind.
     Shell
     cut -d: -f1 /etc/passwd
     
@@ -262,18 +252,16 @@ K3
     cut -d: -f1 /etc/passwd | xargs groups
     
 
-- Um zu testen, ob das Passwort geändert wurde, habe ich mich mit einem zuvor erstellten User eingeloggt.
-    Shell
+- Um zu .testen, ob das Passwort geändert wurde und ob der User auch aktiv ist, habe ich mich mit einem zuvor erstellten User eingeloggt
     su user01
     password: ****
     
 
 ### Ports
 - Um zu testen, ob es die Portkonfiguration übernommen hat,    habe ich folgenden Befehl eingegeben und gesehen, dass die im File angegebenen Ports offen sind.
-    Shell
     netstat -an |grep LISTEN 
     
-- In diesem Fall habe ich Port 80 für die Webseite und Port 22 für die SSH-Verbindung geöffnet. Dies kann man auch testen, indem man die Webseite aufruft und eine Verbindung via SSH aufbaut. 
+- In diesem Fall habe ich Port 80 für die Webseite und Port 22 für die SSH-Verbindung geöffnet. Dies kann man auch testen, indem man die Webseite aufruft und eine Verbindung via SSH aufbaut. Wichtig ist, dass man die firewall er aktiviert nachdem man die Rules gemacht hat. Sonst schliesst man sich aus.
 
 K4
 ======
@@ -282,11 +270,10 @@ K4
  
 ## Firewall
 
-  *Ich habe beim aufsetzen automatisch Firewall Regeln erstellt, indem ich die nötigen Zeilen ins Vagrantfile eingefügt habe:*
+  *Ich habe im Vagrant-File die Firewall installiert, die Rules gemacht und sie dann aktiviert:*
 
 1. Vagrantfile öffnen
 2. Folgende Zeilen einfügen:
-    Shell
       sudo apt-get install ufw
       sudo ufw allow 80/tcp
       sudo ufw allow 22/tcp
@@ -295,7 +282,7 @@ K4
      
 ## Benutzer und Rechtevergabe
 
-*Ich habe beim aufsetzen automatisch User mit Passwort erstellt, indem ich die nötigen Zeilen ins Vagrantfile eingefügt habe:*
+*Ich habe im Vagrant-File eine Neue Gruppe, 2 Benutzer erstellt und ihnen ein Passwort zugewiesen:*
 
 1. Vagrantfile öffnen
 2. Folgende Zeilen einfügen:
@@ -308,11 +295,10 @@ K4
     
 ## SSH
 
-*Ich habe beim aufsetzen automatisch ein SSH Zugang erstellt, indem ich die nötigen Zeilen ins Vagrantfile eingefügt habe:*
+*Ich habe im Vagrant-File einen SSH-Zugang erstellt, indem ich diesen Befehl eingefügt habe:*
 
 1. Vagrantfile öffnen
 2. Folgende Zeilen einfügen:
-    Shell
       sudo apt-get -y install openssh-server
     
 
@@ -326,18 +312,18 @@ K5
 
 *Bereits bekannt*
 
-- Die manuelle Virtualisierung von Ubuntu habe ich schon öfters in anderen Modulen oder im ÜK gemacht.
+- Die bereits bekannte aufwendigere Virtualisierung, habe ich schon oft  in VMware,Hyper-V und Virtualbox in der Schule oder im Geschäft gemacht.
 
 *Neu*
 
- - Vor diesem Modul habe ich immer mit VMWare gearbeiet, also war VirtualBox neu für mich. Ich bin aber sehr schnell und gut zurecht gekommen, da es keine grossen Unterschiede zwischen den beiden gibt.
- - Ich kannte Vagrant vor diesem Modul nicht, daher war alles davon neu für mich.
- - Auch mit Markdown bin ich zuvor nicht in Berührug gekommen.
+ - Vagrant war vor diesem Modul ein ganz neues Gebiet für mich und ich brauchte schon etwas Zeit um damit zurecht zu kommen.
+ - Visualstudio sowie auch Github habe ich auch nicht gekannt vor diesem Modul.
+ - Da ich Github nicht kannte war auch das Markdown für mich ganz neu.
 
 *Fazit*
 
-Ich konnte sehr von LB2 provitieren, da vieles neu für mich war. Vor allem Vagrant und Markdown konnte ich viel neues lernen, da ich zuvor noch nie etwas damit zu tun hatte.
+In diesem Modul habe ich viel neues gelernt. Jetzt weiss ich dass es auch andere einfachere Wege gibt Virtuelle Maschinen zu erstellen.
 
 ## Reflexion
 
-Ich habe bei der LB2 mehr Zeit in die Dokumentation gesteckt, wie in die eigentliche Arbeit. Da wir die Funktionen, die in LB2 automatisert werden müssen, schon beim Teil 10 manuell gemacht haben, konnte man vieles wiederholen. Einzig die Anpassungen im Vagrantfile sind neu dazugekommen. Wobei man sagen muss, dass die meissten Befehle, die darin eingebaut werden, ebenfalls schon bei Teil 10 vorgekommen sind. Die Dokumentation mit Markdown war, wie schon erwähnt neu für mich und hat daher die meisste Zeit in anspruch genommen.
+Für die LB2 hatte ich recht viel Zeit gebraucht um zu verstehen, wie Vagrant funktioniert. Wenn man es versteht ist es wirklich praktisch so neue Virtuelle Maschinen in Betrieb zu nehmen und vorallem kann man das immer wieder als Vorlage benutzen. Das Markdown war komplett neu für mich bisher war ich mir gewohnt mit Word die Projekte zu dokumentieren, aber jetzt habe ich auch gesehen dass es auch anderst geht. Alles in allem muss ich wirklich sagen, dass diese LB2 sehr lehrreich für mich war. 

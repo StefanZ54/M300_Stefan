@@ -5,38 +5,32 @@ Die Dokumentation zeigt alle Schritte auf, die ich während der LB2 gemacht und 
 ## Inhaltsverzeichnis
 - [M300 - LB2 Dokumentation Stefan Seslak](#m300---lb2-dokumentation-stefan-seslak)
 	- [Inhaltsverzeichnis](#inhaltsverzeichnis)
-- [K1](#k1)
 	- [Vagrant](#vagrant)
 	- [Visual Studio Code](#visual-studio-code)
 	- [Git-Client](#git-client)
 	- [SSH-Key](#ssh-key)
-- [K2](#k2)
 	- [GitHub Account](#github-account)
-- [K3](#k3)
 	- [Testen](#testen)
 		- [Apache](#apache)
 		- [Users and Groups](#users-and-groups)
-		- [Ports](#ports)
-- [K4](#k4)
+		- [Firewall Rules](#firewall-rules)
 	- [Firewall](#firewall)
 	- [Benutzer und Rechtevergabe](#benutzer-und-rechtevergabe)
 	- [SSH](#ssh)
-- [K5](#k5)
 	- [Vergleich Vorwissen - Wissenszuwachs](#vergleich-vorwissen---wissenszuwachs)
 	- [Reflexion](#reflexion)
 _
 
-K1
-======
+
 
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
  
   ## VirtualBox
 
-1. Als erstes habe ich  [VirtualBox](https://www.virtualbox.org) und [Ubuntu Desktop 16.04.05] (https://www.ubuntu.com/#download)heruntergeladen.
+1. Als erstes habe ich  [VirtualBox](https://www.virtualbox.org) und [Ubuntu Desktop 16.04.05](https://www.ubuntu.com/#download)heruntergeladen.
 2. Danach habe ich Virtualbox auf meinem PC installiert.
 
-*Nachdem ich das gemacht habe, habe ich die VM erstellt, mit der ISO Datei die ich vorhin heruntergeladen habe und mit Hilfe dieser ANleitung:*
+*Nachdem ich das gemacht habe, habe ich die VM erstellt, mit der ISO Datei die ich vorhin heruntergeladen habe und mit Hilfe dieser Anleitung:*
 1. VirtualBox starten
 2. Mit einem klick auf `Neu` eine neue VM erstellen.
 3. Als nächstes muss man folgende Attribute angeben:
@@ -62,8 +56,9 @@ Nun ist die VM mit all diesen Vorgaben erstellt.
 *Danach habe ich in der Bash von Ubuntu folgende Befehle ausgeführt um das System auf den neusten Stand zu bringen.*
 
 1. Paketliste neu einlesen und Pakete aktualisieren:
-   Shell 
-   $  sudo apt-get update   #Paketlisten des Paketmanagement-Systems "APT" neu einlesen
+   
+   
+	 $  sudo apt-get update   #Paketlisten des Paketmanagement-Systems "APT" neu einlesen
    
    $  sudo apt-get update   #Installierte Pakete wenn möglich auf verbesserte Versionen aktualisieren
 
@@ -89,7 +84,7 @@ Zuerst habe ich [Vagrant](https://www.vagrantup.com/ "vagrantup.com")    herunte
 1. Terminal öffnen
 2. Einen neuen Ordner für die VM anlegen:
     Shell
-      $ cd C:\Users\stefan.seslak\Desktop\MeinRepository
+      $ cd C:\Users\stefan.seslak\Desktop\Meinrepository
       $ mkdir MeineVagrantVM
       $ cd MeineVagrantVM
      
@@ -101,8 +96,8 @@ Zuerst habe ich [Vagrant](https://www.vagrantup.com/ "vagrantup.com")    herunte
      
 4. Die VM ist nun bereit und kann mit SSH-Zugriff bedient werden:
     Shell
-      $ cd C:\Users\silva\MeineVagrantVM      #Zum Verzeichnis der VM wechseln
-      $ vagrant ssh                       #SSH-Verbindung zur VM aufbauen
+      $ cd C:\Users\stefan.seslak\Desktop\Meinrepository\MeineVagrantVM      #Zum Verzeichnis der VM wechseln
+      $ vagrant ssh                       																	 #SSH-Verbindung zur VM aufbauen
      
 Ich habe geshen, dass es viel einfacher und schneller ist mit Vagrant eine VM zu erstellen.
 
@@ -110,7 +105,7 @@ Ich habe geshen, dass es viel einfacher und schneller ist mit Vagrant eine VM zu
 
 1. Terminal öffnen
 2. In das M300-Verzeichnis wechseln:
-      $ cd C:\Users\silva\M300\vagrant\web
+      $ cd C:\Users\stefan.seslak\Desktop\Meinrepository\M300\vagrant\web
      
 3. VM erstellen und starten:
       $ vagrant up
@@ -154,12 +149,13 @@ Dazu habe ich folgende Anweisungen befolgt:
 Damit ich die Befehle lokal auf dem eigenen PC machen konnte, musste ich den "Git Client", auf Windows "Git/Bash" installieren. 
 
 *Client installieren*
-Ich habe die Client-Installation auf [dieser](https://git-scm.com/downloads) Seite heruntergeladen und installiert.
+Ich habe die [Client-Installation](https://git-scm.com/downloads) heruntergeladen und installiert.
 
 *Danach habe ich den Client konfiguriert:*
 1. Terminal öffnen
 2. Git konfigurieren mit Informationen des GitHub-Accounts:
-    Shell
+
+
       $ git config --global user.name "StefanZ54"
       $ git config --global user.email "stef4n7@gmail.com"
      
@@ -168,16 +164,15 @@ Ich habe die Client-Installation auf [dieser](https://git-scm.com/downloads) Sei
 
 1. Terminal öffnen
 2. Ordner für Repository erstellen:
-      $ cd C:\Users\silva\Desktop
-      $ mkdir githublb2
+      $ cd C:\Users\stefan.seslak\Desktop\Meinrepository
+      $ mkdir M300_Stefan
      
 3. Repository mit SSH klonen:
-      $ git clone git@github.com:silvanwalz/lb2.git
+      $ git clone git@github.com:silvanwalz/M300_Stefan.git
 
-      Cloning into 'lb2'...
+      Cloning into 'M300_Stefan'...
      
 4. Repository aktualisieren und Status anzeigen:
-    Shell
       $ git pull
 
       Already up to date.
@@ -188,8 +183,8 @@ Ich habe die Client-Installation auf [dieser](https://git-scm.com/downloads) Sei
 
 *Zuerst musste ich Lokal einen SSH-Key erstellen für mein Repository:*
 
-1.  Folgenden Befehl mit der Account-E-Mail von GitHub in Bash einfügen damit der Schlüssel generiert wird:
-      $  ssh-keygen -t rsa -b 4096 -C "silvan.walz@hotmail.ch"
+1.  Folgenden Befehl mit der Account-E-Mail von GitHub in die Bash einfügen damit der Schlüssel generiert wird:
+      $  ssh-keygen -t rsa -b 4096 -C "stef4n7@gmail.com"
     
 2. Neuer SSH-Key wird erstellt:
       Generating public/private rsa key pair.
@@ -206,17 +201,11 @@ Ich habe die Client-Installation auf [dieser](https://git-scm.com/downloads) Sei
 2.  Unter den Menübereichen auf der linken Seite zum Abschnitt *SSH und GPG keys* wechseln
 3.  Auf *New SSH key* klicken
 4.  Im Formular unter *Title* die Bezeichnung vergeben()
-5.  Den Key von der Datei *C:\Users\stefqn.selak\.ssh\id_rsa.pub* kopieren und im Github einfügen und auf *Add SSH key* klicken
-
-######*SSH Zugriff auf VM*
-
-#Um Zugriff via SSH auf die VM aufzubauen, muss man bloss einen kurzen Befehl eingeben.
-#vagrant ssh
+5.  Den Key von der Datei *C:\Users\stefan.selak\.ssh\id_rsa.pub* kopieren und im Github einfügen und auf *Add SSH key* klicken
 
 
-_
-K2
-======
+
+
 ## GitHub Account
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
 
@@ -227,8 +216,7 @@ K2
 4. Auf *Create an Account* klicken
 5. E-Mail zur Verifizierung bestätigen
 
-K3
-======
+
 
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
  
@@ -240,15 +228,12 @@ K3
 
 ### Users and Groups
 - Mit diesem Befehl habe ich alle Benutzer in der VM angezeigt und habe dann gesehen, das meine beiden User die ich erstellt habe vorhanden sind.
-    Shell
     cut -d: -f1 /etc/passwd
     
 - Mit diesem Befehl zeige ich die Gruppen in der VM an und sehe dann, ob die neue Group erstellt wurde.
-    Shell
     cut -d: -f1 /etc/group
     
 -  Die beiden Befehle oben kann man in einen zusammenfassen, indem man den User mit der dazugehörigen Group anzeigt:
-    Shell
     cut -d: -f1 /etc/passwd | xargs groups
     
 
@@ -257,14 +242,13 @@ K3
     password: ****
     
 
-### Ports
-- Um zu testen, ob es die Portkonfiguration übernommen hat,    habe ich folgenden Befehl eingegeben und gesehen, dass die im File angegebenen Ports offen sind.
+### Firewall Rules
+- Um zu testen, ob es die Firewall Rules übernommen hat, habe ich folgenden Befehl eingegeben und gesehen, dass die im File angegebenen Ports offen sind.
     netstat -an |grep LISTEN 
     
 - In diesem Fall habe ich Port 80 für die Webseite und Port 22 für die SSH-Verbindung geöffnet. Dies kann man auch testen, indem man die Webseite aufruft und eine Verbindung via SSH aufbaut. Wichtig ist, dass man die firewall er aktiviert nachdem man die Rules gemacht hat. Sonst schliesst man sich aus.
 
-K4
-======
+
 
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
  
@@ -287,11 +271,11 @@ K4
 1. Vagrantfile öffnen
 2. Folgende Zeilen einfügen:
     Shell
-      sudo groupadd testadmin
-      sudo useradd user1 -g testadmin -m -s /bin/bash 
-      sudo useradd user2 -g testadmin -m -s /bin/bash 
-      sudo chpasswd <<<user1:abc123	
-      sudo chpasswd <<<user2:abc123
+      sudo groupadd admins
+      sudo useradd user01 -g admins -m -s /bin/bash 
+      sudo useradd user02 -g admins -m -s /bin/bash 
+      sudo chpasswd <<<user01:1234	
+      sudo chpasswd <<<user02:1234
     
 ## SSH
 
@@ -302,8 +286,7 @@ K4
       sudo apt-get -y install openssh-server
     
 
-K5
-======
+
 
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
  

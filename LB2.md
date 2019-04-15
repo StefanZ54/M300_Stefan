@@ -168,7 +168,7 @@ Ich habe die [Client-Installation](https://git-scm.com/downloads) heruntergelade
       $ mkdir M300_Stefan
      
 3. Repository mit SSH klonen:
-      $ git clone git@github.com:silvanwalz/M300_Stefan.git
+      $ git clone git@github.com:StefanZ54/M300_Stefan.git
 
       Cloning into 'M300_Stefan'...
      

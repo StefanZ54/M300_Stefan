@@ -275,7 +275,7 @@ Ich habe hier 3 Sicherheitsaspekte gewählt.
 1. Compose-File öffnen
 2. Folgende Zeilen einfügen:
   
-  php:
+    php:
     
     build: php
     

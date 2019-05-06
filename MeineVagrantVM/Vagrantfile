@@ -16,7 +16,7 @@ config.vm.provision "shell", inline: <<-SHELL
   sudo ufw allow 80/tcp
   sudo ufw allow 22/tcp
   sudo ufw allow out 22/tcp 
-  sudo ufw enable
+  
   
 #ssh installation 
   sudo apt-get -y install openssh-server
@@ -29,12 +29,15 @@ config.vm.provision "shell", inline: <<-SHELL
   sudo a2enmod proxy
   sudo a2enmod proxy_html
   sudo a2enmod proxy_http
+  
 
   sudo service apache2 restart
+  
+  sudo ufw enable
 #neue Gruppe erstellen mit 2Benutzern und Passwort setzen  
-  sudo groupadd admin
-      sudo useradd user01 -g admin -m -s /bin/bash 
-      sudo useradd user02 -g admin -m -s /bin/bash 
+  sudo groupadd admins
+      sudo useradd user01 -g admins -m -s /bin/bash 
+      sudo useradd user02 -g admins -m -s /bin/bash 
       sudo chpasswd <<<user01:1234	
       sudo chpasswd <<<user02:1234
   exit

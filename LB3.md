@@ -248,7 +248,7 @@ Ich habe hier 3 Sicherheitsaspekte gewählt.
    Um Dies zu verhindern, werden nur Sicher Images aus dem Docker Hub benutzt.
 
 2. Überwachung
-   Um die Container zu überwachen habe ich das PRTG-Tool installiert und dort Sensoren eingerichtet
+   Um die Container zu überwachen habe ich das PRTG-Tool installiert und dort Sensoren sowie auch Trigger eingerichtet.
 
 3. Ressorurcen limitieren
    Im Compose File habe ich limiten für die Ressourcen der Container deffiniert.
@@ -274,6 +274,7 @@ Ich habe hier 3 Sicherheitsaspekte gewählt.
 
 1. Compose-File öffnen
 2. Folgende Zeilen einfügen:
+  
   php:
     build: php
     ports:

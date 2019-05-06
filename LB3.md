@@ -1,9 +1,9 @@
-M300 - LB2 Dokumentation Stefan Seslak
+M300 - LB3 Dokumentation Stefan Seslak
 ===
 Die Dokumentation zeigt alle Schritte auf, die ich während der LB2 gemacht und was ich dazu gelernt habehabe.
 
 ## Inhaltsverzeichnis
-- [M300 - LB2 Dokumentation Stefan Seslak](#m300---lb2-dokumentation-stefan-seslak)
+- [M300 - LB3 Dokumentation Stefan Seslak](#m300---lb3-dokumentation-stefan-seslak)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [Vagrant](#vagrant)
   - [Visual Studio Code](#visual-studio-code)

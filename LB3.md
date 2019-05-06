@@ -11,6 +11,7 @@ Die Dokumentation zeigt alle Schritte auf, die ich während der LB2 gemacht und 
   - [SSH-Key](#ssh-key)
   - [GitHub Account](#github-account)
   - [Docker](#docker)
+  - [Sicherheit](#sicherheit)
   - [Testen](#testen)
     - [Webserver](#webserver)
     - [Phpmyadmin](#phpmyadmin)
@@ -73,6 +74,7 @@ Nun ist die VM mit all diesen Vorgaben erstellt.
    $  sudo reboot
    
 6. Danach habe ich geprüft, ob der Standart-Content des Webservers unter "http://127.0.0.01:80"(Localhost) erreichbar ist
+
 
 
 ## Vagrant
@@ -236,7 +238,21 @@ RUN docker-php-ext-install mysqli
 -Mit docker-compose up wird dann das File ausgeführt und die Server eingerichtet.
 
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
- 
+
+
+## Sicherheit
+
+Ich habe hier 3 Sicherheitsaspekte gewählt.
+
+1. Image Poisening
+   Um Dies zu verhindern, werden nur Sicher Images aus dem Docker Hub benutzt.
+
+2. Überwachung
+   Um die Container zu überwachen habe ich das PRTG-Tool installiert und dort Sensoren eingerichtet
+
+3. Ressorurcen limitieren
+   Im Compose File habe ich limiten für die Ressourcen der Container deffiniert.
+
 ## Testen
 
 ### Webserver

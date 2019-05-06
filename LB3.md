@@ -1,6 +1,6 @@
 M300 - LB3 Dokumentation Stefan Seslak
 ===
-Die Dokumentation zeigt alle Schritte auf, die ich während der LB2 gemacht und was ich dazu gelernt habehabe.
+Die Dokumentation zeigt alle Schritte auf, die ich während der LB3 gemacht und was ich dazu gelernt habehabe.
 
 ## Inhaltsverzeichnis
 - [M300 - LB3 Dokumentation Stefan Seslak](#m300---lb3-dokumentation-stefan-seslak)

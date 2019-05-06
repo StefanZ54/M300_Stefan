@@ -276,14 +276,22 @@ Ich habe hier 3 Sicherheitsaspekte gewählt.
 2. Folgende Zeilen einfügen:
   
   php:
+    
     build: php
+    
     ports:
+    
       - "80:80"
       - "443:443"
+    
     restart: on-failure
+    
     volumes:
+    
       - ./php/www:/var/www/html
+    
     cpus: 1
+    
     mem_limit: 1024m
      
 ## MYSQL

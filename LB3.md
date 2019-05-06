@@ -281,14 +281,14 @@ Ich habe hier 3 Sicherheitsaspekte gewählt.
     
     ports:
     
-      - "80:80"
-      - "443:443"
+        "80:80"
+        "443:443"
     
     restart: on-failure
     
     volumes:
     
-      - ./php/www:/var/www/html
+        ./php/www:/var/www/html
     
     cpus: 1
     
@@ -300,17 +300,28 @@ Ich habe hier 3 Sicherheitsaspekte gewählt.
 
 1. Compose-File öffnen
 2. Folgende Zeilen einfügen:
-  db:
+    db:
+
     image: mysql:5.7
+    
     ports:
-     - "3306:3306"
+    
+       "3306:3306"
+    
     volumes:
-     - /var/lib/mysql
+    
+       /var/lib/mysql
+    
     restart: on-failure
+    
     environment:
-     - MYSQL_ROOT_PASSWORD=1234Abcd
-     - MYSQL_DATABASE=datenbank
+    
+       MYSQL_ROOT_PASSWORD=1234Abcd
+    
+       MYSQL_DATABASE=datenbank
+    
     cpus: 1
+    
     mem_limit: 1024m
 
 > [⇧ *Nach oben*](#inhaltsverzeichnis)
@@ -321,16 +332,26 @@ Ich habe hier 3 Sicherheitsaspekte gewählt.
 
 1. Compose-File öffnen
 2. Folgende Zeilen einfügen:
-  phpmyadmin:
+    phpmyadmin:
+    
     image: phpmyadmin/phpmyadmin
+    
     links:
-        - db:db
+    
+          db:db
+    
     ports:
-        - 8080:80
+    
+          8080:80
+    
     restart: on-failure
+    
     environment:
+    
         MYSQL_ROOT_PASSWORD: 1234Abcd
+    
     cpus: 1
+    
     mem_limit: 1024m   
 
 

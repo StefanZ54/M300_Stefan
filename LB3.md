@@ -234,6 +234,8 @@ RUN docker-php-ext-install mysqli
 - Danach habe ich noch ein Compose File ertsellt dort sind die einzelnen Serverressourcen deffiniert.
 
 -Mit docker-compose up wird dann das File ausgeführt und die Server eingerichtet.
+
+> [⇧ *Nach oben*](#inhaltsverzeichnis)
  
 ## Testen
 
@@ -285,6 +287,8 @@ RUN docker-php-ext-install mysqli
      - MYSQL_DATABASE=datenbank
     cpus: 1
     mem_limit: 1024m
+
+> [⇧ *Nach oben*](#inhaltsverzeichnis)
     
 ## Phpmyadmin
 
@@ -326,7 +330,8 @@ RUN docker-php-ext-install mysqli
 *Fazit*
 
 In diesem Modul habe ich viel neues gelernt. Jetzt weiss ich dass es auch andere einfachere Wege gibt Virtuelle Maschinen zu erstellen und Applikationen bereitzustellen. Ich bin auch zufrieden mit dem Endprodukt
-
+> [⇧ *Nach oben*](#inhaltsverzeichnis)
 ## Reflexion
 
 Für die LB3 hatte ich recht viel Zeit gebraucht um zu verstehen, wie Docker funktioniert und was das genau ist. Wenn man es versteht ist es wirklich praktisch so neue Virtuelle Maschinen/Dienste in Betrieb zu nehmen und vorallem kann man das immer wieder als Vorlage benutzen. Schlussendlich hatte ich einen Mailserver, Webserver und zusätzlich noch das Frontend des Mailservers. Ich habe gelernt wie man einen Container bildet und wie man sie in Betrieb nimmt. Alles in allem muss ich wirklich sagen, dass diese LB3 sehr lehrreich für mich war. 
+> [⇧ *Nach oben*](#inhaltsverzeichnis)
